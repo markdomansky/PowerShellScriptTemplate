@@ -1,4 +1,6 @@
-CC0 1.0 Universal
+Copyright 2017, Mark Domansky
+
+Creative Commons Zero 1.0 Universal
 
 Statement of Purpose
 
