@@ -6,7 +6,7 @@ Short 1 line description of what this script does.
 Detailed description of the script and what it is for.
 
 .EXAMPLE
-ScriptTemplate.ps1 -param1 "Cow"
+ScriptTemplate.ps1 -param1 "Value"
 Give an example of common usage.  Repeat EXAMPLE as desired
 
 .PARAMETER Param1
@@ -14,6 +14,17 @@ Short description of the parameter and how to use it.  Include PARAMETER for eac
 
 .PARAMETER Param2
 Short description of the parameter and how to use it.
+
+.INPUTS
+String
+#.NET Framework object types that can be _piped_ in.  Repeat allowed inputs within single INPUTS
+
+.OUTPUTS
+String
+#.NET Framework object types that will be returned.
+
+.LINK
+URI or name of related topic. repeat LINK and URI/name as desired/needed.
 
 .NOTES
 Version:          1.0
