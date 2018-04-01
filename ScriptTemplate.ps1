@@ -68,10 +68,10 @@ param
     [Parameter(Position=0, Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName,
     HelpMessage='What computer name would you like to target?')]
     [ValidateNotNullOrEmpty()]
-    [string[]]$Param1, #accepts multiple, runs process multiple times
+    [string]$Param1,
 		
-    [Parameter(Position=1, Mandatory)]
-    [string]$Param2 = "X"
+    [Parameter()]
+    [switch]$Param2
 
 
 

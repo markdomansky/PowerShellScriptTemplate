@@ -10,5 +10,10 @@ I welcome your suggestions/improvements.  Pull requests are welcome.
 
 ### License
 
-This template is available under Creative Commons Zero v1.0 Universal.
-In short, Public Domain, no Guarantees, no Liability.  [Find out more](https://choosealicense.com/licenses/cc0-1.0/).
+![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)
+
+This template is available under [Creative Commons Zero v1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/).  _In short, Public Domain, no Guarantees, no Liability._
+
+To the extent possible under law, [Mark Domansky](https://github.com/markdomansky) has waived all copyright and related or neighboring rights to [PowerShell Script Template](https://github.com/markdomansky/PowerShellScriptTemplate).  This work is published from: United States.
+
+
