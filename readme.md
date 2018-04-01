@@ -4,7 +4,7 @@ This is a template script I use that includes most of the parameter definitions 
 
 I've tried to describe the various features enough, and the Parameter description is at the bottom so you get to the meat of your scripts faster.
 
-There are some directives and variables specific to [WebJEA](./WebJEA), a project I'll be releasing soon.  If you aren't using WebJEA, the directives won't do anything and the variables are just named that way so they are recognized.
+There are some directives and variables specific to [WebJEA](http://webjea.com), a project I'll be releasing soon.  If you aren't using WebJEA, the directives won't do anything and the variables are just named that way so they are recognized.
 
 I welcome your suggestions/improvements.  Pull requests are welcome.
 
