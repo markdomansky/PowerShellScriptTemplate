@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest schemaVersion="1.0"
+  xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>NISFunction</name>
+    <id>846819b3-ed11-4348-a151-11728d1f907f</id>
+    <version>0.0.5</version>
+    <title>Function Template</title>
+    <description></description>
+    <author>Mark Domansky</author>
+    <tags></tags>
+  </metadata>
+  <parameters>
+    <parameter name="FullName" type="text" prompt="Function author's name" default="$env:username"/>
+    <parameter name="FuncName" type="text" prompt="Function Name (Verb-Noun)" />
+    <parameter name="FuncDesc" type="text" prompt="Brief description on this function" />
+  </parameters>
+  <content>
+    <message>      Deploying script template    </message>
+    <templateFile source='FunctionTemplate.ps1' destination='${PLASTER_PARAM_FuncName}.ps1'/>
+  </content>
+</plasterManifest>

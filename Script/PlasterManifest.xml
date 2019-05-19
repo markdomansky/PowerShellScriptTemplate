@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest schemaVersion="1.0"
+  xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>NISScript</name>
+    <id>952d404b-2ec9-427c-bbfc-be6f1b7c9f1b</id>
+    <version>0.0.5</version>
+    <title>Script Template</title>
+    <description></description>
+    <author>Mark Domansky</author>
+    <tags></tags>
+  </metadata>
+  <parameters>
+    <parameter name="FullName" type="text" prompt="Script author's name" default="$env:username"/>
+    <parameter name="ScriptName" type="text" prompt="Script Name (Verb-Noun)" />
+    <parameter name="ScriptDesc" type="text" prompt="Brief description on this script" />
+  </parameters>
+  <content>
+    <message>      Deploying script template    </message>
+    <templateFile source='ScriptTemplate.ps1' destination='${PLASTER_PARAM_ScriptName}.ps1'/>
+  </content>
+</plasterManifest>
