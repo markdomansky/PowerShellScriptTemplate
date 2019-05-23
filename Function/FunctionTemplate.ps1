@@ -30,9 +30,9 @@ URI or name of related topic. repeat LINK and URI/name as desired/needed.
 .NOTES
 Version:          1.0
 Author:           ${PLASTER_PARAM_FullName}
-Creation Date:    ${PLASTER_PARAM_Date}
+Creation Date:    ${PLASTER_Date}
 History:
-    ${PLASTER_PARAM_Date} ${PLASTER_PARAM_Time}, 1.0, ${PLASTER_PARAM_FullName}, Initial Creation
+    ${PLASTER_Date} ${PLASTER_Time}, 1.0, ${PLASTER_PARAM_FullName}, Initial Creation
 
 
 This template is CC0/1.0 Public Domain and can be found at github.com/markdomansky/powershellscripttemplate
