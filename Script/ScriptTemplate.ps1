@@ -1,12 +1,12 @@
 <#
 .SYNOPSIS
-$PLASTER_PARAM_ScriptName - $PLASTER_PARAM_ScriptDesc
+PLASTER_PARAM_ScriptName - PLASTER_PARAM_ScriptDesc
 
 .DESCRIPTION
 Detailed description of the script and what it is for.
 
 .EXAMPLE
-$PLASTER_PARAM_ScriptName.ps1 -param1 "Value"
+PLASTER_PARAM_ScriptName.ps1 -param1 "Value"
 Give an example of common usage.  Repeat EXAMPLE as desired
 
 .PARAMETER Param1
@@ -28,10 +28,10 @@ URI or name of related topic. repeat LINK and URI/name as desired/needed.
 
 .NOTES
 Version:          1.0
-Author:           $PLASTER_PARAM_FullName
-Creation Date:    $PLASTER_Date
+Author:           PLASTER_PARAM_FullName
+Creation Date:    PLASTER_DateTime
 History:
-    $PLASTER_Date $PLASTER_Time, 1.0, $PLASTER_PARAM_FullName, Initial Creation
+    PLASTER_DateTime, 1.0, PLASTER_PARAM_FullName, Initial Creation
 
 
 This template is CC0/1.0 Public Domain and can be found at github.com/markdomansky/powershellscripttemplate

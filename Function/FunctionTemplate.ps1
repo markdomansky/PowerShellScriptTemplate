@@ -1,109 +1,112 @@
-Function ${PLASTER_PARAM_FuncName} {
+Function PLASTER_PARAM_FuncName
+{
     <#
-.SYNOPSIS
-${PLASTER_PARAM_FuncName} ${PLASTER_PARAM_FuncDesc}
+    .SYNOPSIS
+    PLASTER_PARAM_FuncName - PLASTER_PARAM_FuncDesc
 
-.DESCRIPTION
-Detailed description of the script and what it is for.
+    .DESCRIPTION
+    Detailed description of the script and what it is for.
 
-.EXAMPLE
-${PLASTER_PARAM_FuncName} -param1 "Value"
-Give an example of common usage.  Repeat EXAMPLE as desired
+    .EXAMPLE
+    PLASTER_PARAM_FuncName -param1 "Value"
+    Give an example of common usage.  Repeat EXAMPLE as desired
 
-.PARAMETER Param1
-Short description of the parameter and how to use it.  Include PARAMETER for each parameter
+    .PARAMETER Param1
+    Short description of the parameter and how to use it.  Include PARAMETER for each parameter
 
-.PARAMETER Param2
-Short description of the parameter and how to use it.  Include PARAMETER for each parameter
+    .PARAMETER Param2
+    Short description of the parameter and how to use it.  Include PARAMETER for each parameter
 
-.INPUTS
-String
-#.NET Framework object types that can be _piped_ in.  Repeat allowed inputs within single INPUTS
+    .INPUTS
+    String
+    #.NET Framework object types that can be _piped_ in.  Repeat allowed inputs within single INPUTS
 
-.OUTPUTS
-String
-#.NET Framework object types that will be returned.
+    .OUTPUTS
+    String
+    #.NET Framework object types that will be returned.
 
-.LINK
-URI or name of related topic. repeat LINK and URI/name as desired/needed.
+    .LINK
+    URI or name of related topic. repeat LINK and URI/name as desired/needed.
 
-.NOTES
-Version:          1.0
-Author:           ${PLASTER_PARAM_FullName}
-Creation Date:    ${PLASTER_Date}
-History:
-    ${PLASTER_Date} ${PLASTER_Time}, 1.0, ${PLASTER_PARAM_FullName}, Initial Creation
+    .NOTES
+    Version:          1.0
+    Author:           PLASTER_PARAM_FullName
+    Creation Date:    PLASTER_DateTime
+    History:
+        PLASTER_DateTime, 1.0, PLASTER_PARAM_FullName, Initial Creation
 
 
-This template is CC0/1.0 Public Domain and can be found at github.com/markdomansky/powershellscripttemplate
-#note: This comment block MUST come before everything else.
-#>
-#requires -version 5.1 #3, #6
-#remove extra # to enable a requires
-##requires -runasadministrator
-##requires -modules <module-name>,<module-name> #repeat as desired, replace <module-name> with @{ModuleName="X";ModuleVersion="1.0.0.0"} if you want specific versions
-##requires -shellid <shellid>
+    This template is CC0/1.0 Public Domain and can be found at github.com/markdomansky/powershellscripttemplate
+    #note: This comment block MUST come before everything else.
+    #>
 
-#This PS1 script can be turned into a function by wrapping the entire script in "Function <functionname> {<full content of script including help block>}"
+    #requires -version 5.1 #3, #6
+    #remove extra # to enable a requires
+    ##requires -runasadministrator
+    ##requires -modules <module-name>,<module-name> #repeat as desired, replace <module-name> with @{ModuleName="X";ModuleVersion="1.0.0.0"} if you want specific versions
+    ##requires -shellid <shellid>
 
-[CmdletBinding(SupportsShouldProcess = $True, ConfirmImpact = 'Medium')]
-#SupportsShouldProcess=$true - forces acceptance of -Whatif and -Confirm
-#ConfirmImpact='Medium' (Low, Medium (default), High) will prompt for action where $pscmdlet.shouldprocess is called - OPINION: Low for Get-, Medium for Set/Remove-, High for high-impact Set/Remove-
-#$pscmdlet.ShouldProcess("target",["action"]) is run.  Returns true/false, generally only want for high impact actions (i.e. restart computer)
-#TODO better explain confirmimpact, supportsshouldprocess
-#DefaultParameterSetName="X" whatever parameterset used below
-#HelpUri="Uri" used to store help documentation elsewhere: http://msdn.microsoft.com/en-us/library/dd878343(v=vs.85).aspx
-#SupportsPaging=$true - adds First,Skip, IncludeTotalCount parameters automatically PSv3 req'd
-#PositionalBinding=$false - default true, allows parameters by position, when false, all parameters must be defined by name (-computername "X")
+    #This PS1 script can be turned into a function by wrapping the entire script in "Function <functionname> {<full content of script including help block>}"
 
-#NOTE whatif, confirm, verbose, and debug are all passed through to sub-cmdlets/scripts called within the script.
+    [CmdletBinding(SupportsShouldProcess = $True, ConfirmImpact = 'Medium')]
+    #SupportsShouldProcess=$true - forces acceptance of -Whatif and -Confirm
+    #ConfirmImpact='Medium' (Low, Medium (default), High) will prompt for action where $pscmdlet.shouldprocess is called - OPINION: Low for Get-, Medium for Set/Remove-, High for high-impact Set/Remove-
+    #$pscmdlet.ShouldProcess("target",["action"]) is run.  Returns true/false, generally only want for high impact actions (i.e. restart computer)
+    #TODO better explain confirmimpact, supportsshouldprocess
+    #DefaultParameterSetName="X" whatever parameterset used below
+    #HelpUri="Uri" used to store help documentation elsewhere: http://msdn.microsoft.com/en-us/library/dd878343(v=vs.85).aspx
+    #SupportsPaging=$true - adds First,Skip, IncludeTotalCount parameters automatically PSv3 req'd
+    #PositionalBinding=$false - default true, allows parameters by position, when false, all parameters must be defined by name (-computername "X")
 
-param
-(
-    #Parameter Templates are at the bottom of the script
+    #NOTE whatif, confirm, verbose, and debug are all passed through to sub-cmdlets/scripts called within the script.
 
-    [Parameter(Position = 0, Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName,
-        HelpMessage = 'What computer name would you like to target?')]
-    [ValidateNotNullOrEmpty()]
-    [string]$Param1,
+    param
+    (
+        #Parameter Templates are at the bottom of the script
 
-    [Parameter()]
-    [switch]$Param2
+        [Parameter(Position = 0, Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName,
+            HelpMessage = 'What computer name would you like to target?')]
+        [ValidateNotNullOrEmpty()]
+        [string]$Param1,
 
-) #/param
+        [Parameter()]
+        [switch]$Param2
 
-begin
-{
-    #$ErrorActionPreference = Stop #Stop, *Continue*, SilentlyContinue
-    #$VerboseActionPreference = Continue #Stop, Continue, *SilentlyContinue*
+    ) #/param
 
-    #do pre script checks, etc
-
-} #/begin
-
-process
-{
-    #$PSBoundParameters.containskey('') to determine if value was specified for parameter
-    #switch ($pscmdlet.parametersetname) {"Group1" {} "Group2" {} }
-
-    Write-Verbose "Beginning process loop"
-
-    foreach ($p1 in $Param1)
+    begin
     {
-        Write-Verbose "Processing $p1"
-        if ($PSCmdlet.ShouldProcess($p1, "copy files"))
+        #$ErrorActionPreference = Stop #Stop, *Continue*, SilentlyContinue
+        #$VerboseActionPreference = Continue #Stop, Continue, *SilentlyContinue*
+
+        #do pre script checks, etc
+
+    } #/begin
+
+    process
+    {
+        #$PSBoundParameters.containskey('') to determine if value was specified for parameter
+        #switch ($pscmdlet.parametersetname) {"Group1" {} "Group2" {} }
+
+        Write-Verbose "Beginning process loop"
+
+        foreach ($p1 in $Param1)
         {
-            Write-Output "$p1 - $Param2"
+            Write-Verbose "Processing $p1"
+            if ($PSCmdlet.ShouldProcess($p1, "copy files"))
+            {
+                Write-Output "$p1 - $Param2"
+            }
         }
-    }
 
-} #/process
+    } #/process
 
-end
-{
-    #useful for cleanup, or to write-output whatever you want to return to the user
-} #/end
+    end
+    {
+        #useful for cleanup, or to write-output whatever you want to return to the user
+    } #/end
 
+}
 ###############################################################
 # Parameter Template
 ###############################################################

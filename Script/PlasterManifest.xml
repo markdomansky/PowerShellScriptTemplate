@@ -20,24 +20,20 @@
     <templateFile source='ScriptTemplate.ps1' destination='${PLASTER_PARAM_ScriptName}.ps1'/>
     <modify path='${PLASTER_PARAM_ScriptName}.ps1' encoding='UTF8'>
     <replace>
-        <original>(?s)(\$PLASTER_PARAM_ScriptName)</original>
+        <original>(?s)(PLASTER_PARAM_ScriptName)</original>
         <substitute expand='true'>$PLASTER_PARAM_ScriptName</substitute>
     </replace>
     <replace>
-        <original>(?s)(\$PLASTER_PARAM_ScriptDesc)</original>
+        <original>(?s)(PLASTER_PARAM_ScriptDesc)</original>
         <substitute expand='true'>$PLASTER_PARAM_ScriptDesc</substitute>
     </replace>
     <replace>
-        <original>(?s)(\$PLASTER_PARAM_FullName)</original>
+        <original>(?s)(PLASTER_PARAM_FullName)</original>
         <substitute expand='true'>$PLASTER_PARAM_FullName</substitute>
     </replace>
     <replace>
-        <original>(?s)(\$PLASTER_Date)</original>
-        <substitute expand='true'>$PLASTER_Date</substitute>
-    </replace>
-    <replace>
-        <original>(?s)(\$PLASTER_Time)</original>
-        <substitute expand='true'>$PLASTER_Time</substitute>
+        <original>(?s)(PLASTER_DateTime)</original>
+        <substitute expand='true'>$PLASTER_Date $PLASTER_Time</substitute>
     </replace>
     </modify>
   </content>
